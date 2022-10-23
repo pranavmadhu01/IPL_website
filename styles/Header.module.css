@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 3px 10px 3px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_nav_list {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+.header_nav_list_anchor {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
