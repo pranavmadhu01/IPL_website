@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
       <div className={styles.footer_copyright}>
         <small>
-          Copyright © 2021 Kerala Startup Mission. All Rights Reserved.
+          Copyright © 2022 Kerala Startup Mission. All Rights Reserved.
         </small>
       </div>
     </footer>

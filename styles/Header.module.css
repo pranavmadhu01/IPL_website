@@ -16,6 +16,13 @@
 }
 .header_nav_list_anchor {
   text-decoration: none;
-  color:white;
+  color: white;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.header_nav_list_anchor_active {
+  text-decoration: none;
+  color: #3a60ac;
+  font-weight: 900;
   text-transform: capitalize;
 }
