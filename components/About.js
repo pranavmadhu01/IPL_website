@@ -21,7 +21,9 @@ const About = () => {
           categories.
         </p>
       </div>
-      <div className={styles.image_wrapper}></div>
+      <div className={styles.image_wrapper}>
+        
+      </div>
     </div>
   );
 };
