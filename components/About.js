@@ -5,6 +5,17 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import styles from "../styles/About.module.css";
+import img2 from "../public/assets/img2.jpg";
+import img3 from "../public/assets/img3.jpg";
+import img4 from "../public/assets/img4.jpg";
+import img5 from "../public/assets/img5.jpg";
+import img6 from "../public/assets/img6.jpg";
+import img7 from "../public/assets/img7.jpeg";
+import bg1 from "../public/assets/bg1.jpg";
+import bg2 from "../public/assets/bg2.jpg";
+import bg3 from "../public/assets/bg3.jpg";
+import Image from "next/image";
+const array = [img2, img3, img4, img5, img6, img7, bg1, bg2, bg3];
 const About = () => {
   return (
     <div className={styles.about_wrapper}>
@@ -29,6 +40,7 @@ const About = () => {
       </div>
       <div className={styles.image_wrapper}>
         <Swiper
+          loop={true}
           autoplay={{ delay: 3000 }}
           effect={"coverflow"}
           grabCursor={true}
@@ -45,33 +57,11 @@ const About = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
+          {array.map((img) => (
+            <SwiperSlide>
+              <Image width={300} height={300} src={img} objectFit="cover" />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
