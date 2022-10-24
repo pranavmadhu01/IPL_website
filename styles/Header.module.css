@@ -9,10 +9,22 @@
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0);
 }
+.header_active {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 3px 10px 3px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  background-color: rgba(58, 96, 172, 0.8);
+  /* background-color: rgba(241, 143, 30, 0.8); */
+}
 .header_nav_list {
   display: flex;
   list-style-type: none;
-  gap: 10px;
+  gap: 15px;
 }
 .header_nav_list_anchor {
   text-decoration: none;
@@ -25,4 +37,7 @@
   color: #3a60ac;
   font-weight: 900;
   text-transform: capitalize;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 }

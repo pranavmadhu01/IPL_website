@@ -31,7 +31,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={scrollY ? styles.header : styles.header_active}>
       <Image
         src={logo}
         alt="kerala startup mission logo"
@@ -42,14 +42,7 @@ const Header = () => {
         <ul className={styles.header_nav_list}>
           {anchors.map((anchor) => (
             <li>
-              <a
-                href={`#${anchor}`}
-                className={
-                  scrollY
-                    ? styles.header_nav_list_anchor
-                    : styles.header_nav_list_anchor_active
-                }
-              >
+              <a href={`#${anchor}`} className={styles.header_nav_list_anchor}>
                 {anchor}
               </a>
             </li>
