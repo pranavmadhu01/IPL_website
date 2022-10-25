@@ -4,8 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import styles from "../styles/Timeline.module.css";
-import flag from "../../public/assets/flag.jpg";
-import Image from "next/image";
+import flag from "../public/assets/flag.jpg";
+import Image from 'next/future/image'
+
 
 
 
@@ -20,7 +21,8 @@ const Timeline = () => {
             <ol className={styles.ps_timeline}>
                 <li className={styles.subContainer}>
                     <div className={styles.img_handler_top}>
-                    <Image width={30} src={flag} alt="flag" />
+                    <Image width={150} src={flag} alt="flag" />
+
                     </div>
                     <div className={styles.ps_bot}>
                         <div className={styles.event_container}>
@@ -34,7 +36,9 @@ const Timeline = () => {
                 <li className={styles.subContainer}>
 
                     <div className={styles.img_handler_bot}>
-                    <Image  src={"http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png"} alt="flag" layout="fill" />
+                    <Image width={150} src={flag} alt="flag" />
+
+                   
 
                     </div>
                     <div className={styles.ps_top}>
@@ -48,7 +52,7 @@ const Timeline = () => {
                 </li>
                 <li>
                     <div className={styles.img_handler_top}>
-                    <Image width={300} src={flag} alt="flag" />
+                    <Image width={150} src={flag} alt="flag" />
 
                     </div>
                     <div className={styles.ps_bot}>
@@ -62,7 +66,8 @@ const Timeline = () => {
                 </li>
                 <li>
                 <div className={styles.img_handler_bot}>
-                <Image width={30} src={flag} alt="flag" />
+                <Image width={150} src={flag} alt="flag" />
+
 
                     </div>
                     <div className={styles.ps_top}>
@@ -75,7 +80,8 @@ const Timeline = () => {
                    <span className={styles.ps_sp_bot}>04</span>
                 </li><li>
                 <div className={styles.img_handler_top}>
-                <Image width={30} src={flag} alt="flag" />
+                <Image width={150} src={flag} alt="flag" />
+
 
                     </div>
                     <div className={styles.ps_bot}>
@@ -90,7 +96,8 @@ const Timeline = () => {
                 </li>
                 <li>
                 <div className={styles.img_handler_bot}>
-                <Image width={30} src={flag} alt="flag" />
+                <Image width={150} src={flag} alt="flag" />
+
                     </div>
                     <div className={styles.ps_top}>
                     <div className={styles.event_container}>

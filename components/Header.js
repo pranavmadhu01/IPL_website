@@ -6,10 +6,7 @@ const Header = () => {
   const anchors = [
     "home",
     "timeline",
-    // "ambassedors",
-    // "awards",
-    // "leaderborad",
-    // "resources",
+    "about",
     "contact",
   ];
   const [scrollY, setScrollY] = useState(true);

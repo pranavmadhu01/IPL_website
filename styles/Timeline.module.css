@@ -140,14 +140,14 @@
       margin: 0 auto !important;
       width: 80% !important;
     }
-    /* .ps_timeline_sec .container ol.ps_timeline li .img_handler_bot {
+    .ps_timeline_sec .container ol.ps_timeline li .img_handler_bot {
       position: absolute !important;
       bottom: 115px !important;
       width: 30% !important;
       float: left !important;
       margin-left: 35px !important;
       margin-bottom: 0 !important;
-    } */
+    } 
     .ps_timeline_sec .container ol.ps_timeline li p {
       text-align: left !important;
       width: 100% !important;
