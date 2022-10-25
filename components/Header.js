@@ -40,8 +40,8 @@ const Header = () => {
       />
       <nav>
         <ul className={styles.header_nav_list}>
-          {anchors.map((anchor) => (
-            <li>
+          {anchors.map((index,anchor) => (
+            <li key={index}>
               <a href={`#${anchor}`} className={styles.header_nav_list_anchor}>
                 {anchor}
               </a>

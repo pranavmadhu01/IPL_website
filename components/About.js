@@ -22,7 +22,7 @@ const About = () => {
       <div className={styles.about_content_wrapper}>
         <h2 className={styles.about_content_wrapper_title}>About</h2>
         <p className={styles.about_content_wrapper_content}  style={{ fontFamily:'montserrat' }}>
-          Innovators' Premier League (IPL) is an initiative of the Kerala
+          Innovators&apos; Premier League (IPL) is an initiative of the Kerala
           Startup Mission (KSUM) to bring out the best talents from the Kerala
           Innovation Hubs. IPL aims to bring awareness and sensitization of IEDC
           & its activities among students, building a competitive &
@@ -57,8 +57,8 @@ const About = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
-          {array.map((img) => (
-            <SwiperSlide>
+          {array.map((index,img) => (
+            <SwiperSlide key={index}>
               <Image width={300} height={300} src={img} objectFit="cover" />
             </SwiperSlide>
           ))}

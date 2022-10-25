@@ -125,26 +125,26 @@
     .ps_timeline_sec .container ol.ps_timeline li span.ps_sp_bot:after {
       content: none !important;
     }
-    .ps_timeline_sec .container ol.ps_timeline li .img_handler_top {
+    /* .ps_timeline_sec .container ol.ps_timeline li .img_handler_top {
       position: absolute !important;
       bottom: 150px !important;
       width: 30% !important;
       float: left !important;
       margin-left: 35px !important;
       margin-bottom: 0 !important;
-    }
+    } */
     .ps_timeline_sec .container ol.ps_timeline li .img_handler_top img {
       margin: 0 auto !important;
       width: 80% !important;
     }
-    .ps_timeline_sec .container ol.ps_timeline li .img_handler_bot {
+    /* .ps_timeline_sec .container ol.ps_timeline li .img_handler_bot {
       position: absolute !important;
       bottom: 115px !important;
       width: 30% !important;
       float: left !important;
       margin-left: 35px !important;
       margin-bottom: 0 !important;
-    }
+    } */
     .ps_timeline_sec .container ol.ps_timeline li p {
       text-align: left !important;
       width: 100% !important;
@@ -311,9 +311,10 @@
     position: absolute;
     bottom: 0;
     margin-bottom: 100px;
+    left: 20%;
   }
   .ps_timeline_sec .container ol.ps_timeline li .ps_bot {
     position: absolute;
     margin-top: 35px;
-    left: 35%;
+    left: 20%;
   }
