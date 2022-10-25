@@ -21,7 +21,7 @@ const About = () => {
     <div className={styles.about_wrapper}>
       <div className={styles.about_content_wrapper}>
         <h2 className={styles.about_content_wrapper_title}>About</h2>
-        <p className={styles.about_content_wrapper_content}>
+        <p className={styles.about_content_wrapper_content}  style={{ fontFamily:'montserrat' }}>
           Innovators' Premier League (IPL) is an initiative of the Kerala
           Startup Mission (KSUM) to bring out the best talents from the Kerala
           Innovation Hubs. IPL aims to bring awareness and sensitization of IEDC
