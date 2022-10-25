@@ -34,7 +34,7 @@ const Timeline = () => {
                 <li className={styles.subContainer}>
 
                     <div className={styles.img_handler_bot}>
-                    <Image width={50} src={flag} alt="flag" />
+                    <Image width={50} src={flag} alt="flag" layout="fill" />
 
                     </div>
                     <div className={styles.ps_top}>

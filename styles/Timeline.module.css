@@ -102,13 +102,13 @@
       margin-top: 0 !important;
     }
     .ps_timeline_sec .container ol.ps_timeline li:last-child .img_handler_bot img {
-      width: 100%;
+      /* width: 100%; */
     }
     .ps_timeline_sec .container ol.ps_timeline li:last-child .ps_top {
       margin-bottom: 0 !important;
       top: 20px;
       width: 50% !important;
-      left: 50%;
+      /* left: 50%; */
     }
     .ps_timeline_sec .container ol.ps_timeline li span {
       left: 0 !important;
