@@ -25,3 +25,19 @@
 .image_wrapper {
   flex: 0.5;
 }
+@media all and (max-width: 1000px) {
+  .about_content_wrapper_title {
+    font-size: 35px;
+  }
+  .about_content_wrapper_content {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 500px) {
+  .about_wrapper {
+    padding: 30px 20px 0px 20px;
+  }
+  .about_content_wrapper_content {
+    line-height: 25px;
+  }
+}
