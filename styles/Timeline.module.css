@@ -46,6 +46,9 @@
     .img_handler_top{
       position: relative;
     }
+    .event_container{
+      margin-top: 10%;
+    }
     .ps_bot{
       display: flex;
       flex-direction: column;

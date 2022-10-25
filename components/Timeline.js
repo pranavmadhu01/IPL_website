@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import styles from "../styles/Timeline.module.css";
-import flag from "../public/assets/bg3.jpg";
+import flag from "../../public/assets/flag.jpg";
 import Image from "next/image";
 
 
@@ -34,7 +34,7 @@ const Timeline = () => {
                 <li className={styles.subContainer}>
 
                     <div className={styles.img_handler_bot}>
-                    <Image width={50} src={flag} alt="flag" layout="fill" />
+                    <Image  src={"http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png"} alt="flag" layout="fill" />
 
                     </div>
                     <div className={styles.ps_top}>
@@ -48,7 +48,7 @@ const Timeline = () => {
                 </li>
                 <li>
                     <div className={styles.img_handler_top}>
-                    <Image width={30} src={flag} alt="flag" />
+                    <Image width={300} src={flag} alt="flag" />
 
                     </div>
                     <div className={styles.ps_bot}>

@@ -57,7 +57,7 @@ const About = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
-          {array.map((index,img) => (
+          {array.map((img,index) => (
             <SwiperSlide key={index}>
               <Image width={300} height={300} src={img} objectFit="cover" />
             </SwiperSlide>
