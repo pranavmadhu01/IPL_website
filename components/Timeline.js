@@ -25,7 +25,7 @@ const Timeline = () => {
 
                     </div>
                     <div className={styles.ps_bot}>
-                        <div className={styles.event_container}>
+                        <div className={styles.event_container2}>
                             <h1 className={styles.date}>26 Oct 2022</h1>
                         <p className={styles.event_desc}>IPL Launch</p>
 
@@ -36,7 +36,7 @@ const Timeline = () => {
                 <li className={styles.subContainer}>
 
                     <div className={styles.img_handler_bot}>
-                    <Image width={150} src={flag} alt="flag" />
+                    <Image width={150} src={flag} alt="flag" className={styles.img3}/>
 
                    
 
@@ -50,7 +50,7 @@ const Timeline = () => {
                     </div>
                     <span className={styles.ps_sp_bot}>02</span>
                 </li>
-                <li>
+                <li className={styles.subContainer}>
                     <div className={styles.img_handler_top}>
                     <Image width={150} src={flag} alt="flag" />
 
@@ -64,7 +64,7 @@ const Timeline = () => {
                     </div>
                     <span className={styles.ps_sp_top}>03</span>
                 </li>
-                <li>
+                <li className={styles.subContainer}>
                 <div className={styles.img_handler_bot}>
                 <Image width={150} src={flag} alt="flag" />
 
@@ -78,7 +78,7 @@ const Timeline = () => {
                         </div>
                     </div>
                    <span className={styles.ps_sp_bot}>04</span>
-                </li><li>
+                </li>  <li className={styles.subContainer}>
                 <div className={styles.img_handler_top}>
                 <Image width={150} src={flag} alt="flag" />
 
@@ -94,15 +94,15 @@ const Timeline = () => {
                     </div>
                     <span className={styles.ps_sp_top}>05</span>
                 </li>
-                <li>
+                <li className={styles.subContainer}>
                 <div className={styles.img_handler_bot}>
                 <Image width={150} src={flag} alt="flag" />
 
                     </div>
                     <div className={styles.ps_top}>
                     <div className={styles.event_container}>
-                            <h1 className={styles.date}>26 Oct 2022</h1>
-                        <p className={styles.event_desc}>State Level Challenges Before IEDC Summit 2023</p>
+                    <h1 className={styles.date}>State Level Challenges Before IEDC Summit 2023</h1>
+        
 
                         </div>
                     </div>
