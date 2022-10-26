@@ -34,3 +34,21 @@
   text-align: center;
   background-color: #2f4999;
 }
+@media all and (max-width:500px)
+{
+  .footer_title {
+    font-size: 25px;
+  }
+  .footer_address {
+    font-size: 14px;
+  }
+  .anchor_logo{
+
+    font-size: 25px;
+  
+  }
+  .footer_copyright {
+    font-size: 10px;
+  }
+  
+}
