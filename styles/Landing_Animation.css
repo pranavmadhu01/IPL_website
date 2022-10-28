@@ -2,3 +2,9 @@
   width: 20%;
   margin-bottom: 3em;
 }
+@media only screen and (max-width: 767px) {
+  .hero-img{
+    width: 50%;
+    margin-bottom: 1em;
+  }
+}

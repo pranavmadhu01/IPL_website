@@ -15,14 +15,33 @@ import bg1 from "../public/assets/bg1.jpg";
 import bg2 from "../public/assets/bg2.jpg";
 import bg3 from "../public/assets/bg3.jpg";
 import Image from "next/image";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const array = [img2, img3, img4, img5, img6, img7, bg1, bg2, bg3];
 const About = () => {
 
+  const Variant = {
+    visible:{opacity:1,x:0,scale:1, transition: { duration: 1 }},
+    hidden:{opacity: 0,x:50,scale:.8}
+  }
+
   const imageRefs = useRef([])
   const ambientRef = useRef()
+  
+  const control = useAnimation()
+  const [ref2, inView] = useInView()
+
+  useEffect(() => {
+    
+    if (inView) {
+      control.start("visible");
+    } 
+  }, [control, inView]);
+
   useEffect(() => {
     startAnimation()
   }, [])
+  
 
   const startAnimation = () => {
     loopArray()
@@ -55,12 +74,18 @@ const About = () => {
             <div ref={ambientRef} className={styles.ambient_wrapper}></div>
             {array.map((img,i) => (
               <div className={styles.abt_img} key={i} ref={el => imageRefs.current[i] = el} >
-                <Image width={400} height={300} src={img} objectFit="cover" />
+                <Image layout="fill" src={img} objectFit="contain" />
               </div>
             ))}
           </div>
       </div>
-      <div className={styles.about_content_wrapper}>
+      <motion.div  
+        className={styles.about_content_wrapper}
+        ref={ref2}
+        variants={Variant}
+        initial="hidden"
+        animate={control} 
+      >
         <h2 className={styles.about_content_wrapper_title}><span className={styles.head_underlin}>About</span> IPL</h2>
         <p className={styles.about_content_wrapper_content}  >
           Innovators' Premier League (IPL) is an initiative of the Kerala
@@ -78,7 +103,7 @@ const About = () => {
           camps, workshops, startup generation, patents, etc. under various
           categories.
         </p>
-      </div>
+      </motion.div>
      
     </div>
   );

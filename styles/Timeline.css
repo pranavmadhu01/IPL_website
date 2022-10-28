@@ -1,0 +1,45 @@
+.timeline-cont{
+  color: white;
+  padding: 3em 10em;
+}
+.timeline-date{
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #ef8354;
+  text-shadow: 0 0 27px #ef8354;
+  margin-bottom: .5em;
+}
+.timeline-points{
+  padding-left: 25px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 2em;
+}
+.animate-desc{
+  animation:reelIn .5s ease-in-out;
+}
+.timeline-head{
+  color: #ef4b6a;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+@media only screen and (max-width: 767px){
+  .timeline-head{
+    margin: 2em auto;
+  }
+  .timeline-cont{
+    padding: 2em 1em;
+  }
+}
+@keyframes reelIn {
+  0%{
+    transform: translateX(-50%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

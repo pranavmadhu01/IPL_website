@@ -52,4 +52,18 @@
   font-weight: bold;
   margin-top: 1em;
 }
+@media only screen and (max-width:767px) {
+  .hero_title{
+    text-align: center;
+  }
+  .hero_tag{
+    text-align: center;
+    line-height: 2em;
+    margin: .5em;
+  }
+  .hero_date{
+    margin-top: 0;
+    text-align: center;
+  }
+}
 
