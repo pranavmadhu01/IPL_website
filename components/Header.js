@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Header.module.css";
-import logo from "../public/assets/ksum.png";
+// import logo from "../public/assets/ksum.png";
+import logo from "../public/assets/ipl2.png";
 import Image from "next/image";
 const Header = () => {
   const anchors = [
@@ -16,7 +17,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 300) {
         setScrollY(false);
       } else {
         setScrollY(true);
@@ -32,12 +33,12 @@ const Header = () => {
 
   return (
     <header className={scrollY ? styles.header : styles.header_active}>
+      <div className={styles.nav_logo}>
       <Image
         src={logo}
         alt="kerala startup mission logo"
-        width="80px"
-        height="80px"
       />
+      </div>
       <nav>
         <ul className={styles.header_nav_list}>
           {anchors.map((anchor) => (

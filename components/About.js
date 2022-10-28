@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -17,11 +17,52 @@ import bg3 from "../public/assets/bg3.jpg";
 import Image from "next/image";
 const array = [img2, img3, img4, img5, img6, img7, bg1, bg2, bg3];
 const About = () => {
+
+  const imageRefs = useRef([])
+  const ambientRef = useRef()
+  useEffect(() => {
+    startAnimation()
+  }, [])
+
+  const startAnimation = () => {
+    loopArray()
+    setInterval(()=>{
+      loopArray()
+    },5000*array.length)
+  }
+
+  const loopArray = ()=>{
+    for(let i = 0 ;i<array.length;i++) {
+      setTimeout(()=>{
+        if(i>0){
+          imageRefs.current[i-1].classList.add(styles.hide_image)
+          imageRefs.current[i-1].classList.remove(styles.show_image)
+        }else{
+          imageRefs.current[array.length-1].classList.add(styles.hide_image)
+          imageRefs.current[array.length-1].classList.remove(styles.show_image)
+        }
+        ambientRef.current.style.backgroundImage = `url('${array[i].src}')`
+        imageRefs.current[i].classList.remove(styles.hide_image)
+        imageRefs.current[i].classList.add(styles.show_image)
+      },5000*i)
+    }
+  }
+  
   return (
     <div className={styles.about_wrapper}>
+       <div className={styles.image_wrapper}>
+          <div>
+            <div ref={ambientRef} className={styles.ambient_wrapper}></div>
+            {array.map((img,i) => (
+              <div className={styles.abt_img} key={i} ref={el => imageRefs.current[i] = el} >
+                <Image width={400} height={300} src={img} objectFit="cover" />
+              </div>
+            ))}
+          </div>
+      </div>
       <div className={styles.about_content_wrapper}>
-        <h2 className={styles.about_content_wrapper_title}>About</h2>
-        <p className={styles.about_content_wrapper_content}  style={{ fontFamily:'montserrat' }}>
+        <h2 className={styles.about_content_wrapper_title}><span className={styles.head_underlin}>About</span> IPL</h2>
+        <p className={styles.about_content_wrapper_content}  >
           Innovators' Premier League (IPL) is an initiative of the Kerala
           Startup Mission (KSUM) to bring out the best talents from the Kerala
           Innovation Hubs. IPL aims to bring awareness and sensitization of IEDC
@@ -38,32 +79,7 @@ const About = () => {
           categories.
         </p>
       </div>
-      <div className={styles.image_wrapper}>
-        <Swiper
-          loop={true}
-          autoplay={{ delay: 3000 }}
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          {array.map((img) => (
-            <SwiperSlide>
-              <Image width={300} height={300} src={img} objectFit="cover" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+     
     </div>
   );
 };
