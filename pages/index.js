@@ -8,6 +8,9 @@ import Timeline from "../components/TimeLine";
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Innovators' Premier League 2022</title>
+      </Head>
       <Header />
       <Hero />
       <About />
