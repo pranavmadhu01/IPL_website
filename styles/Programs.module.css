@@ -1,0 +1,50 @@
+.programs_top{
+  display: flex;
+  overflow-x: auto;
+  width: 97%;
+  margin: auto;
+  gap: 20px;
+  padding: 10px 0;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.pgm_arr_top{
+  position: relative;
+  margin-bottom: 5em;
+}
+.pgm_arr_top svg{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+  background: black;
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.pgm_arr_top svg:nth-of-type(1){
+  top: 40%;
+  right: 40px;
+}
+.pgm_arr_top svg:nth-of-type(2){
+  top: 40%;
+  left: 40px;
+}
+.pgm_card_top{
+  width: auto;
+  flex-shrink: 0;
+}
+.pgm_img img{
+  border-radius: 10px 0px 10px 0px;
+}
+.pgm_cont{
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  margin-top: 10px;
+  
+}

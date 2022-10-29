@@ -34,7 +34,7 @@
 .header_nav_list {
   display: flex;
   list-style-type: none;
-  gap: 5em;
+  gap: 3em;
 }
 .header_nav_list li{
   color: white;

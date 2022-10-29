@@ -38,9 +38,9 @@ const About = () => {
     } 
   }, [control, inView]);
 
-  useEffect(() => {
-    startAnimation()
-  }, [])
+  // useEffect(() => {
+  //   startAnimation()
+  // }, [])
   
 
   const startAnimation = () => {
@@ -68,8 +68,8 @@ const About = () => {
   }
   
   return (
-    <div className={styles.about_wrapper}>
-       <div className={styles.image_wrapper}>
+    <div className={styles.about_wrapper} id='about'>
+       {/* <div className={styles.image_wrapper}>
           <div>
             <div ref={ambientRef} className={styles.ambient_wrapper}></div>
             {array.map((img,i) => (
@@ -78,7 +78,7 @@ const About = () => {
               </div>
             ))}
           </div>
-      </div>
+        </div> */}
       <motion.div  
         className={styles.about_content_wrapper}
         ref={ref2}
@@ -94,13 +94,13 @@ const About = () => {
           & its activities among students, building a competitive &
           entrepreneurial mindset among innovators, and create the pipeline of
           startups.
-          <br></br>
-          During IPL, the students and other talents in the institution will
+          <br></br><br/>
+          During IPL, the students in the institution will
           compete with each other at the College level, followed by Regional
-          level competitions under the 3 major pillars - Innovation, Technology
+          level and at the State level challenges under the 3 major pillars - Innovation, Technology
           & Entrepreneurship. The league competition runs on a point scale where
-          institutions and students can achieve points through conducting boot
-          camps, workshops, startup generation, patents, etc. under various
+          institutions and students can achieve points by organizing and taking part in boot
+          camps, workshops, ideathons, hackathons, etc. under various
           categories.
         </p>
       </motion.div>

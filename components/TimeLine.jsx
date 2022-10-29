@@ -35,17 +35,17 @@ export default function Timeline(){
   }, [control, inView]);
   
 
-  const VALUES = ['2022-10-26','2022-10-27','2022-11-02','2022-12-27','2023-01-01','2023-02-14']
+  const VALUES = ['2022-10-26','2022-11-02','2022-12-27','2023-01-01','2023-02-14','2023-03-04']
   const CONTENT = {
-    '2022-10-26':['IPL Launch'],
-    '2022-10-27':['Starting of Institution Level Events','Starting of Institution Level Challenges'],
+    '2022-10-26':['IPL Launch','Institution Level Events and Challenges Begins'],
     '2022-11-02':['Last date for IPL Launch Plan Submission'],
-    '2022-12-27':['Ending of Institution Level Events'],
-    '2023-01-01':['Starting of Regional Level Events'],
-    '2023-02-14':['IPL Ends']
+    '2022-12-27':['Institution Level Challenges ends'],
+    '2023-01-01':['Regional Level Events Begins'],
+    '2023-02-14':['IPL 2.0 Concludes'],
+    '2023-03-04':['IEDC Summit 2023']
   }
   return(
-    <div>
+    <div id="timeline">
         <h1 className="timeline-head">Timeline</h1>
         {/* Bounding box for the Timeline */}
         <motion.div 
@@ -67,7 +67,7 @@ export default function Timeline(){
             values={ VALUES } />
         </motion.div>
         <div ref={descRef} className='timeline-cont'>   
-          <p className="timeline-date">{new Date(VALUES[value]).toDateString()}</p>
+          {/* <p className="timeline-date">{new Date(VALUES[value]).toDateString()}</p> */}
           <ul className="timeline-points">
             {CONTENT[VALUES[value]].map(point=>{
               return(

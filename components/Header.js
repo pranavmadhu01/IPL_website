@@ -3,15 +3,19 @@ import styles from "../styles/Header.module.css";
 // import logo from "../public/assets/ksum.png";
 import logo from "../public/assets/ipl2.png";
 import Image from "next/image";
+import Link from "next/link";
 const Header = () => {
   const anchors = [
     "home",
+    "about",
+    "programs",
     "timeline",
     // "ambassedors",
     // "awards",
     // "leaderborad",
-    // "resources",
-    "contact",
+    "references",
+    "throwbacks",
+    "contacts",
   ];
   const [scrollY, setScrollY] = useState(true);
 
@@ -43,9 +47,9 @@ const Header = () => {
         <ul className={styles.header_nav_list}>
           {anchors.map((anchor) => (
             <li>
-              <a href={`#${anchor}`} className={styles.header_nav_list_anchor}>
+              <Link href={`#${anchor}`} ><a className={styles.header_nav_list_anchor}>
                 {anchor}
-              </a>
+              </a></Link>
             </li>
           ))}
         </ul>

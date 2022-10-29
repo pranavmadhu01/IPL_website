@@ -1,0 +1,105 @@
+.ref_top{
+  width: 80%;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  padding-top: 0;
+  padding-bottom: 3em;
+  margin-top: 5em;
+}
+.ref_top h1{
+  color: #ef4b6a;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 1em auto 1em auto;
+  text-align: center;
+}
+.ref_but_top{
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
+
+}
+.ref_but{
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+
+  outline: none;
+  position: relative;
+  border:none;
+  box-shadow: none;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  
+}
+
+.ref_but span {
+  background: rgb(0,172,238);
+  background: linear-gradient(90deg, rgba(239,75,106,1) 0%, rgba(239,131,84,1) 100%);
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ref_but span a{
+  text-decoration: none;
+  color: white;
+}
+.ref_but span:nth-child(1) {
+
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.ref_but span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.ref_but:hover span:nth-child(1) {
+
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.ref_but:hover span:nth-child(2) {
+
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+@media only screen and (max-width:767px) {
+  .ref_but_top{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
