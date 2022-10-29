@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Header.module.css";
-// import logo from "../public/assets/ksum.png";
+import  {BiMenuAltRight}  from "react-icons/bi";
+import {AiOutlineCloseSquare} from "react-icons/ai";
 import logo from "../public/assets/ipl2.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +19,8 @@ const Header = () => {
     "contacts",
   ];
   const [scrollY, setScrollY] = useState(true);
-
+  const [showMenu, setShowMenu] = useState(false);
+  const nav =useRef(null);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -27,13 +29,23 @@ const Header = () => {
         setScrollY(true);
       }
     };
-    handleScroll();
-
+    // if(window.innerWidth>968){
+      handleScroll();
+    // }
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleCloseOPen = () => {
+    if(nav!==null){
+      nav.current.classList.toggle(styles.open);
+      setShowMenu(!showMenu);
+    }
+  }
+
 
   return (
     <header className={scrollY ? styles.header : styles.header_active}>
@@ -43,8 +55,8 @@ const Header = () => {
         alt="kerala startup mission logo"
       />
       </div>
-      <nav>
-        <ul className={styles.header_nav_list}>
+      <nav >
+        <ul className={styles.header_nav_list} ref={nav}>
           {anchors.map((anchor) => (
             <li>
               <Link href={`#${anchor}`} ><a className={styles.header_nav_list_anchor}>
@@ -52,8 +64,17 @@ const Header = () => {
               </a></Link>
             </li>
           ))}
+          
         </ul>
+        <div className={styles.mobile_menu_btn}>
+          {showMenu?<AiOutlineCloseSquare onClick={handleCloseOPen} size={50} />:<BiMenuAltRight onClick={handleCloseOPen} size={50}/>}
+        
+        </div>
+
+        
       </nav>
+
+
     </header>
   );
 };
