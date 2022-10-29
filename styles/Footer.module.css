@@ -108,4 +108,17 @@
     width: 80%;
     margin: auto;
   }
+  .footer_cont{
+    width: 100%;
+  }
+  .footer_logos{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer_social{
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1em;
+  }
 }

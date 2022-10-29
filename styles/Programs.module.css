@@ -48,3 +48,13 @@
   margin-top: 10px;
   
 }
+
+@media only screen and (max-width:767px){
+  .programs_top{
+    margin: 5em auto;
+    width: 90%;
+  }
+  .pgm_arr_top svg{
+    display: none;
+  }
+}

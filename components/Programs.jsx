@@ -22,7 +22,7 @@ export default function Programs(){
     console.log(scrollRef.current.scrollLeft);
   }
   return (
-    <div className={styles.pgm_arr_top}>
+    <div className={styles.pgm_arr_top} id='programs'>
       <AiOutlineRight onClick={moveLeft} />
       <AiOutlineLeft onClick={moveRight} />
       <div ref={scrollRef} className={styles.programs_top}>
