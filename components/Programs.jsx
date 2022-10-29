@@ -32,7 +32,7 @@ export default function Programs(){
             <div className={styles.pgm_card_top}>
               
               <div ref={imageRef} className={styles.pgm_img}>
-                <Image src={img} width={300} height={450}/>
+                <Image src={img} width={250} height={350}/>
               </div>
               <div className={styles.pgm_cont}>
                 <p>{event.name}</p>

@@ -101,5 +101,9 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: fit-content;
+  }
+  .ref_but,.ref_but span{
+    width: 160px;
   }
 }

@@ -1,5 +1,5 @@
 .about_wrapper {
-  min-height: 90vh;
+  margin: 5em 2em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -77,6 +77,7 @@
 @media only screen and (max-width:767px){
   .about_wrapper{
     flex-direction: column;
+    margin: 3em 0;
   }
   .ambient_wrapper{
     width: 100%;

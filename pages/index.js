@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import Refereneces from "../components/Refereneces";
+import Stats from "../components/Stats";
 import Timeline from "../components/TimeLine";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Stats />
       <Programs />
       <Timeline />
       <Refereneces />
