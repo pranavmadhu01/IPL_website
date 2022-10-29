@@ -35,18 +35,18 @@
   color: white;
   font-size: 24px;
   margin: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 .hero_tag p{
   position: relative;
-  display: inline-block;
   padding: 10px 15px;
-
   color: #03e9f4;
   text-decoration: none;
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
-  margin-right: 50px;
 }
 
 .hero_tag p span{
@@ -59,7 +59,7 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg,transparent,#03e9f4);
-  animation: animate1 1s linear infinite;
+  animation: animate1 2s linear infinite;
   padding: 0;
 }
 @keyframes animate1{
@@ -76,8 +76,8 @@
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg,transparent,#03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
   padding: 0;
 }
 @keyframes animate2{
@@ -94,8 +94,8 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(270deg,transparent,#03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.50s;
+  animation: animate3 2s linear infinite;
+  animation-delay: 0.75s;
   padding: 0;
 }
 @keyframes animate3{
@@ -114,8 +114,8 @@
   width: 2px;
   height: 100%;
   background: linear-gradient(360deg,transparent,#03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
   padding: 0;
 }
 @keyframes animate4{
@@ -126,26 +126,57 @@
       bottom: 100%;
   }
 }
-.hero_tag p:hover{
-  background: #03e9f4;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 200px #03e9f4;
+.hero_tag p:nth-child(1):hover{
+  background: #f9c31d;
+  box-shadow: 0 0 5px #f9c31d,
+              0 0 25px #f9c31d,
+              0 0 50px #f9c31d,
+              0 0 200px #f9c31d;
    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
   color: white;
   border-radius: 3px;
 
 }
+.hero_tag p:nth-child(2):hover{
+  background: #3a60ac;
+  box-shadow: 0 0 5px #3a60ac,
+              0 0 25px #3a60ac,
+              0 0 50px #3a60ac,
+              0 0 200px #3a60ac;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  color: white;
+  border-radius: 3px;
 
+}
+.hero_tag p:nth-child(3):hover{
+  background: #d31b69;
+  box-shadow: 0 0 5px #d31b69,
+              0 0 25px #d31b69,
+              0 0 50px #d31b69,
+              0 0 200px #d31b69;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  color: white;
+  border-radius: 3px;
+
+}
 .hero_tag p:nth-child(1){
-  filter: hue-rotate(197deg);
+  color: #f9c31d ;
 }
 .hero_tag p:nth-child(2){
-  filter: hue-rotate(64deg);
+  color: #3a60ac ;
 }
 .hero_tag p:nth-child(3){
-  filter: hue-rotate(165deg);
+  color: #d31b69 ;
+}
+.hero_tag p:nth-child(2) span{
+  background: linear-gradient(270deg,transparent,#3a60ac);
+}
+.hero_tag p:nth-child(3) span{
+  background: linear-gradient(270deg,transparent,#d31b69);
+}
+.hero_tag p:nth-child(1) span{
+  background: linear-gradient(270deg,transparent,#f9c31d);
+ 
 }
 .hero_date{
   position: relative;
