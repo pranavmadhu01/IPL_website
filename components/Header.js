@@ -4,9 +4,9 @@ import styles from "../styles/Header.module.css";
 import logo from "../public/assets/ipl_white.png";
 import  {BiMenuAltRight}  from "react-icons/bi";
 import {AiOutlineCloseSquare} from "react-icons/ai";
-import logo from "../public/assets/ipl2.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const Header = () => {
   const anchors = [
     "home",
@@ -22,6 +22,7 @@ const Header = () => {
   ];
   const [scrollY, setScrollY] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
   const nav =useRef(null);
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +41,12 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleMenuClick = (path)=>{
+    handleCloseOPen()
+    router.push(`#${[path]}`)
+  }
+  
 
   const handleCloseOPen = () => {
     if(nav!==null){
@@ -61,9 +68,9 @@ const Header = () => {
         <ul className={styles.header_nav_list} ref={nav}>
           {anchors.map((anchor) => (
             <li>
-              <Link href={`#${anchor}`} ><a className={styles.header_nav_list_anchor}>
+              <p onClick={()=>{handleMenuClick(anchor)}} className={styles.header_nav_list_anchor}>
                 {anchor}
-              </a></Link>
+              </p>
             </li>
           ))}
           

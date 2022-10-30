@@ -88,14 +88,16 @@
 }
 
 .open{
-  display: flex !important;
+  /* display: flex !important; */
+  transform: translateX(0) !important;
 }
 @media screen and (max-width: 968px) {
   .header {
     padding: 20px 20px;
   }
   .header_nav_list {
-    display: none;
+    transition: .5s;
+    transform: translateX(100%);
     flex-direction: column;
     position: absolute;
     top: 0%;
