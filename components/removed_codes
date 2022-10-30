@@ -1,0 +1,60 @@
+  // useEffect(() => {
+  //   startAnimation()
+  // }, [])
+  
+
+  // const startAnimation = () => {
+  //   loopArray()
+  //   setInterval(()=>{
+  //     loopArray()
+  //   },5000*array.length)
+  // }
+
+  // const loopArray = ()=>{
+  //   for(let i = 0 ;i<array.length;i++) {
+  //     setTimeout(()=>{
+  //       if(i>0){
+  //         imageRefs.current[i-1].classList.add(styles.hide_image)
+  //         imageRefs.current[i-1].classList.remove(styles.show_image)
+  //       }else{
+  //         imageRefs.current[array.length-1].classList.add(styles.hide_image)
+  //         imageRefs.current[array.length-1].classList.remove(styles.show_image)
+  //       }
+  //       ambientRef.current.style.backgroundImage = `url('${array[i].src}')`
+  //       imageRefs.current[i].classList.remove(styles.hide_image)
+  //       imageRefs.current[i].classList.add(styles.show_image)
+  //     },5000*i)
+  //   }
+  // }
+
+         {/* <div className={styles.image_wrapper}>
+          <div>
+            <div ref={ambientRef} className={styles.ambient_wrapper}></div>
+            {array.map((img,i) => (
+              <div className={styles.abt_img} key={i} ref={el => imageRefs.current[i] = el} >
+                <Image layout="fill" src={img} objectFit="contain" />
+              </div>
+            ))}
+          </div>
+        </div> */}
+
+
+
+        // <AiOutlineRight onClick={moveLeft} />
+        // <AiOutlineLeft onClick={moveRight} />
+        // <div ref={scrollRef} className={styles.programs_top}>
+          
+        //   {event_data.map(event=>{
+        //     return(
+        //       <div className={styles.pgm_card_top}>
+                
+        //         <div ref={imageRef} className={styles.pgm_img}>
+        //           <Image src={img} width={250} height={350}/>
+        //         </div>
+        //         <div className={styles.pgm_cont}>
+        //           <p>{event.name}</p>
+        //         </div>
+        //       </div>
+        //     )
+        //   })}
+        // </div>

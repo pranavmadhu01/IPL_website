@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Header.module.css";
 // import logo from "../public/assets/ksum.png";
-import logo from "../public/assets/ipl2.png";
+import logo from "../public/assets/ipl_white.png";
 import Image from "next/image";
 import Link from "next/link";
 const Header = () => {

@@ -1,85 +1,102 @@
 import Image from 'next/image'
+import { isMobile } from 'react-device-detect';
 import styles from '../styles/Programs.module.css'
 
 import img from '../public/assets/img5.jpg'
 
-import {
-  AiOutlineLeft,
-  AiOutlineRight
-} from 'react-icons/ai'
-import { useRef } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination,Navigation, Autoplay } from "swiper";
+import { useEffect, useState } from 'react';
+
 
 export default function Programs(){
 
-  const scrollRef =  useRef()
-  const imageRef = useRef()
-  const moveLeft = ()=>{
-    scrollRef.current.scrollLeft += imageRef.current.clientWidth
-    console.log(scrollRef.current.scrollLeft);
-  }
-  const moveRight = ()=>{
-    scrollRef.current.scrollLeft -= imageRef.current.clientWidth
-    console.log(scrollRef.current.scrollLeft);
-  }
+  const [slidesPerView, setslidesPerView] = useState(5.5)
+  const [spaceBetween, setspaceBetween] = useState(20)
+
+  useEffect(() => {
+    if(isMobile){
+      setslidesPerView(1.5)
+      setspaceBetween(10)
+    }
+  }, [])
+  
+
   return (
-    <div className={styles.pgm_arr_top} id='programs'>
-      <AiOutlineRight onClick={moveLeft} />
-      <AiOutlineLeft onClick={moveRight} />
-      <div ref={scrollRef} className={styles.programs_top}>
-        
+    <div className={styles.pgm_arr_top} id='programs'>   
+      <Swiper
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        slidesPerGroup={1}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        navigation={true}
+        modules={[Autoplay,Pagination, Navigation]}
+        className={styles.mySwiper}
+      >
         {event_data.map(event=>{
           return(
-            <div className={styles.pgm_card_top}>
-              
-              <div ref={imageRef} className={styles.pgm_img}>
-                <Image src={img} width={250} height={350}/>
+            <SwiperSlide>
+              <div className={styles.pgm_card_top}>  
+                <div className={styles.pgm_img}>
+                  <Image src={img} width={250} height={350}/>
+                </div>
+                <div className={styles.pgm_cont}>
+                  <p>{event.name}</p>
+                </div>
               </div>
-              <div className={styles.pgm_cont}>
-                <p>{event.name}</p>
-              </div>
-            </div>
+            </SwiperSlide>
           )
         })}
-      </div>
+      </Swiper>
     </div>
   )
 }
 
 const event_data = [
   {
-    name:'Codeathon',
-    image:'codeathon.jpg'
+    name:'Hackathons',
+    image:'random.png'
   },
   {
-    name:'Design-A-Thon',
-    image:'designathon.jpg'
+    name:'Ideathons',
+    image:'random.png'
+  },{
+    name:'Startup Pitch',
+    image:'random.png'
   },
   {
-    name:'Python Workshop',
-    image:'python_workshop.jpg'
+    name:'Product Showcase',
+    image:'random.png'
   },
   {
-    name:'Makeathon',
-    image:'makeathon.jpg'
+    name:'iTalk',
+    image:'random.png'
   },
   {
-    name:'Open Mic - STC',
-    image:'openmic.png'
+    name:'Bootcamps',
+    image:'random.png'
   },
   {
-    name:'Design-A-Thon',
-    image:'designathon.jpg'
+    name:'Workshops',
+    image:'random.png'
   },
   {
-    name:'Investor Cafe',
-    image:'investor_cafe.jpg'
+    name:'FabLab Visits',
+    image:'random.png'
   },
   {
-    name:'Why Hack - Women',
-    image:'whyhack.jpg'
-  },
-  {
-    name:'Buildathon: Day-2',
-    image:'buildathon_hackathon.jpg'
+    name:'Experience Sessions',
+    image:'random.png'
   }
 ]

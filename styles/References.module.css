@@ -34,7 +34,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   outline: none;
   position: relative;
   border:none;
@@ -60,13 +60,14 @@
   box-sizing: border-box;
   -webkit-transition: all .3s;
   transition: all .3s;
+  
 }
 .ref_but span a{
   text-decoration: none;
   color: white;
 }
 .ref_but span:nth-child(1) {
-
+  top: 3px;
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);

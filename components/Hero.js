@@ -13,7 +13,6 @@ const Hero = () => {
           <Image src={ipllogo} />
         </div>
         <p className={styles.hero_title}>Innovators' Premier League </p>
-        <p className={styles.time_to_tag}>Its Time to</p>
         <div className={styles.hero_tag}> 
           <p>
             <span></span>

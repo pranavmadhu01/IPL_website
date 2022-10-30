@@ -49,7 +49,7 @@ export default function Timeline(){
         <h1 className="timeline-head">Timeline</h1>
         {/* Bounding box for the Timeline */}
         <motion.div 
-          style={{ width: '90%', height: '100px', margin: '0 auto', color:'white' }}
+          style={{ width: '80%', height: '100px', margin: '0 auto', color:'white' }}
           ref={ref3}
           variants={Variant}
           initial="hidden"
@@ -61,7 +61,9 @@ export default function Timeline(){
               setPrevious(value)
               setValue(index)
             }}
-            isOpenBeginning='true'
+            getLabel={function(date) { return `${new Date(date).getDate()<10?'0'+new Date(date).getDate():new Date(date).getDate()} ${new Date(date).toLocaleString('default', { month: 'short' })} \r\n ${new Date(date).getFullYear()}` }}
+            isOpenBeginning={false}
+            isOpenEnding={false}
             styles={{foreground:'#ef4b6a',background:'white',outline:'white'}}
             maxEventPadding='300'
             values={ VALUES } />

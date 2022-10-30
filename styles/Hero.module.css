@@ -30,6 +30,7 @@
   font-size: 3rem;
   line-height: 1;
   font-weight: bold;
+  letter-spacing: 5px;
 }
 .hero_tag{
   color: white;
@@ -47,6 +48,7 @@
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .hero_tag p span{
@@ -126,7 +128,7 @@
       bottom: 100%;
   }
 }
-.hero_tag p:nth-child(1):hover{
+.hero_tag p:nth-child(2):hover{
   background: #f9c31d;
   box-shadow: 0 0 5px #f9c31d,
               0 0 25px #f9c31d,
@@ -137,7 +139,7 @@
   border-radius: 3px;
 
 }
-.hero_tag p:nth-child(2):hover{
+.hero_tag p:nth-child(1):hover{
   background: #3a60ac;
   box-shadow: 0 0 5px #3a60ac,
               0 0 25px #3a60ac,
@@ -159,22 +161,22 @@
   border-radius: 3px;
 
 }
-.hero_tag p:nth-child(1){
+.hero_tag p:nth-child(2){
   color: #f9c31d ;
 }
-.hero_tag p:nth-child(2){
+.hero_tag p:nth-child(1){
   color: #3a60ac ;
 }
 .hero_tag p:nth-child(3){
   color: #d31b69 ;
 }
-.hero_tag p:nth-child(2) span{
+.hero_tag p:nth-child(1) span{
   background: linear-gradient(270deg,transparent,#3a60ac);
 }
 .hero_tag p:nth-child(3) span{
   background: linear-gradient(270deg,transparent,#d31b69);
 }
-.hero_tag p:nth-child(1) span{
+.hero_tag p:nth-child(2) span{
   background: linear-gradient(270deg,transparent,#f9c31d);
  
 }
@@ -197,6 +199,7 @@
 @media only screen and (max-width:767px) {
   .hero_title{
     text-align: center;
+    line-height: 60px;
   }
   .hero_tag{
     text-align: center;
