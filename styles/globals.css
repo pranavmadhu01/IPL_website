@@ -40,8 +40,14 @@ body {
   width: 100%;
   height: 100%;
 } */
+.events-wrapper{
+  overflow: unset !important;
+}
 .events-wrapper+ul li{
   background-image: unset !important;
+}
+#timeline .buttons{
+  display: none !important;
 }
 .swiper-button-next, .swiper-button-prev{
   width: 50px !important;
@@ -59,4 +65,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width:767px) {
+  #timeline .buttons{
+    display: block !important;
+  }
+  .events-wrapper{overflow: hidden !important;}
 }

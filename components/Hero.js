@@ -36,7 +36,7 @@ const Hero = () => {
             Celebrate
           </p>
         </div>
-        <p className={styles.hero_date}> 26 Oct 2022 - 14 Feb 2023</p>
+        <p className={styles.hero_date}> 27 Oct 2022 - 14 Feb 2023</p>
       </div>
       
     </>

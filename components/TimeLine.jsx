@@ -35,9 +35,10 @@ export default function Timeline(){
   }, [control, inView]);
   
 
-  const VALUES = ['2022-10-26','2022-11-02','2022-12-27','2023-01-01','2023-02-14','2023-03-04']
+  const VALUES = ['2022-10-26','2022-10-27','2022-11-02','2022-12-27','2023-01-01','2023-02-14','2023-03-04']
   const CONTENT = {
-    '2022-10-26':['IPL Launch','Institution Level Events and Challenges Begins'],
+    '2022-10-26':['IPL Launch'],
+    '2022-10-27':['Institution Level Events and Challenges Begins'],
     '2022-11-02':['Last date for IPL Launch Plan Submission'],
     '2022-12-27':['Institution Level Challenges ends'],
     '2023-01-01':['Regional Level Events Begins'],

@@ -40,7 +40,7 @@ const Footer = () => {
         <div className={styles.footer_address}>
           
           <p>
-            <span><HiOfficeBuilding/>Thejaswini, G3B, Technopark Rd, <br/>Karyavattom, Thiruvananthapuram, Kerala 695581 </span>
+            <span><HiOfficeBuilding/>Thejaswini, G3B, Technopark Rd, <br/>Karyavattom, Thiruvananthapuram,<br/> Kerala 695581 </span>
             <span><AiFillPhone/>0471-2700270</span>
             <span><AiFillMail/>iedckerala@startupmission.in</span>
           </p>
