@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: #030001; */
 
 }
 html,
@@ -59,4 +60,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Css change for particle background */
+
+.hero-img{
+  z-index: 10;
+}
+.particles {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.test-page{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }

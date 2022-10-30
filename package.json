@@ -18,8 +18,10 @@
     "react-icons": "^4.6.0",
     "react-intersection-observer": "^9.4.0",
     "react-particles": "^2.3.3",
+    "react-tsparticles": "^2.3.3",
     "sharp": "^0.31.1",
     "swiper": "^8.4.4",
+    "tsparticles": "^2.3.4",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
