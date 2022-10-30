@@ -30,6 +30,12 @@
   border-bottom: 1px solid rgb(30 30 30);
   /* background-color: rgba(241, 143, 30, 0.8); */
 }
+.header_logo_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width:100px */
+}
 .header_nav_list {
   display: flex;
   list-style-type: none;

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/Header.module.css";
-// import logo from "../public/assets/ksum.png";
+import ksumlogo from "../public/assets/ksum.png";
 import logo from "../public/assets/ipl_white.png";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
@@ -59,8 +59,13 @@ const Header = () => {
 
   return (
     <header className={scrollY ? styles.header : styles.header_active}>
-      <div className={styles.nav_logo}>
-        <Image src={logo} alt="kerala startup mission logo" />
+      <div className={styles.header_logo_wrapper}>
+        <div className={styles.nav_logo}>
+          <Image src={logo} alt="kerala startup mission logo"/>
+        </div>
+        <div className={styles.nav_logo}>
+          <Image src={ksumlogo} alt="kerala startup mission logo" />
+        </div>
       </div>
       <nav>
         <ul className={styles.header_nav_list} ref={nav}>
