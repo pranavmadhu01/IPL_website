@@ -63,14 +63,11 @@ const Header = () => {
         <div className={styles.nav_logo}>
           <Image src={logo} alt="kerala startup mission logo"/>
         </div>
-        <div className={styles.nav_logo}>
-          <Image src={ksumlogo} alt="kerala startup mission logo" />
-        </div>
       </div>
       <nav>
         <ul className={styles.header_nav_list} ref={nav}>
           {anchors.map((anchor, index) => (
-            <li>
+            <li className={dropdownActive && index === 5 && styles.dropdown_active}>
               <p
                 onClick={() => {
                   handleMenuClick(anchor, index);
@@ -85,7 +82,6 @@ const Header = () => {
                     <a
                       href="https://ipl.startupmission.in/1.0/"
                       target="_blank_"
-                      style={{ textDecoration: "none", color: "#ef8354" }}
                     >
                       IPL 1.0
                     </a>
