@@ -19,7 +19,7 @@
 .ref_but_top{
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
+  width: 70vw;
   margin: auto;
 
 }

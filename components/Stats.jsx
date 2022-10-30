@@ -9,7 +9,7 @@ export default function Stats(){
 
   const [ref, inView] = useInView()
   const nodeRef = useRef([]);
-  const stati_data = [375,30000,3000,100]
+  const stati_data = [375,30000,3000,100,3]
 
   useEffect(() => {
     if(inView){
@@ -42,9 +42,9 @@ export default function Stats(){
       <div className={styles.stat_widget}>
         <p><span><custom ref={el => nodeRef.current[3] = el}>100</custom><sup>+</sup></span><span>Days</span></p>
       </div>
-      {/* <div className={styles.stat_widget}>
-        <p><span><custom ref={el => nodeRef.current[4] = el}>75</custom><sup>+</sup></span><span>Awards</span></p>
-      </div> */}
+      <div className={styles.stat_widget}>
+        <p><span><custom ref={el => nodeRef.current[4] = el}>3</custom><sup>+</sup></span><span>Challenges</span></p>
+      </div>
     </div>
   )
 }

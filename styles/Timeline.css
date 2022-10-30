@@ -1,6 +1,12 @@
 .timeline-cont{
   color: white;
-  padding: 1em 10em;
+  padding: 1em 0;
+  width: 90%;
+  margin: auto;
+}
+.timeline-cont ul{
+  position: relative;
+  left: 38px;
 }
 .timeline-date{
   font-size: 30px;
@@ -33,6 +39,9 @@
   }
   .timeline-cont{
     padding: 2em 1em;
+  }
+  .timeline-cont ul{
+    position: unset;
   }
 }
 @keyframes reelIn {

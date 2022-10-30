@@ -1,5 +1,6 @@
 .stats_top{
   width: 80%;
+  min-width: fit-content;
   margin: auto;
   padding: 2em 1em;
   background: rgb(112 112 112 / 19%);
@@ -11,9 +12,9 @@
 }
 .stat_widget{
   color: white;
-  font-size: 60px;
+  font-size: 4vw;
   border-right: 1px solid #2e2e2e;
-  padding:0 65px;
+  padding:0 4vw;
 }
 .stat_widget:last-of-type{
   border: none;
@@ -35,10 +36,12 @@
     flex-direction: column;
     padding: 1em 2em;
     width: 80%;
+    min-width: unset;
   }
   .stat_widget{
     padding: 30px 0;
     border-right: none;
     border-bottom: 1px solid #2e2e2e;
+    font-size: 60px;
   }
 }

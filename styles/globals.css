@@ -22,7 +22,7 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track{
-  background-color: rgb(14, 14, 14);
+  background-color: #101c4b;
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb{
@@ -49,13 +49,14 @@ body {
   height: 100%;
 } */
 .events-wrapper{
-  overflow: unset !important;
+  /* overflow: unset !important; */
+  z-index: 1000;
 }
 .events-wrapper+ul li{
   background-image: unset !important;
 }
 #timeline .buttons{
-  display: none !important;
+  /* display: none !important; */
 }
 .swiper-button-next, .swiper-button-prev{
   width: 50px !important;
