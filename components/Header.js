@@ -45,9 +45,29 @@ const Header = () => {
     };
   }, []);
 
+  function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop];
+    }
+  }
+
+
   const handleMenuClick = (path, index) => {
     handleCloseOPen(index);
-    router.push(`#${[path]}`);
+    // router.push(`#${[path]}`);
+    // document.getElementById(path).scrollIntoView({block:'nearest'})
+    if(path !== 'throwbacks'){
+      window.scroll({
+        left:0,
+        top:findPos(document.getElementById(path))-150, 
+        behavior:'smooth'
+      });
+    }
+
   };
 
   const handleCloseOPen = (index) => {
