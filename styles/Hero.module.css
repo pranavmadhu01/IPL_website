@@ -1,6 +1,6 @@
 .hero_wrapper {
-  background-image: url('https://particles.js.org/images/background3.jpg');
-  background-color: rgba(0, 0, 0, 0.65);
+  /* background-image: url('https://particles.js.org/images/background3.jpg'); */
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: color;
   background-position: center;
   background-size: cover;
@@ -16,6 +16,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+.mainContainer{
   position: relative;
 }
 .hero_wrapper::before{
@@ -218,5 +222,5 @@
 }
 
 .ztop{
-  z-index: 10;
+  z-index: 100;
 }

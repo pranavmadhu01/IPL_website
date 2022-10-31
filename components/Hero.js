@@ -138,7 +138,7 @@ const Hero = () => {
     fps_limit: 60,
     background: {
       // image: "url('../public/assets/bg4.png')"
-      // image: "url('https://particles.js.org/images/background3.jpg')",
+      image: "url('https://particles.js.org/images/background3.jpg')",
       color: {
         value: "transparent",
       },
