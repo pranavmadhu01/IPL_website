@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import Refereneces from "../components/Refereneces";
 import Stats from "../components/Stats";
+import Table from "../components/Table";
 import Timeline from "../components/TimeLine";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Stats />
       <Programs />
       <Timeline />
+      <Table />
       <Refereneces />
       <Footer />
     </div>

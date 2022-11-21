@@ -17,7 +17,7 @@ const Header = () => {
     "timeline",
     // "ambassedors",
     // "awards",
-    // "leaderborad",
+    "leaderborad",
     "references",
     "throwbacks",
     "contacts",
